@@ -44,10 +44,12 @@ function App() {
 
   return (
     <>
-      <div className="grid min-h-screen min-w-screen bg-[url('./assets/Wallpaper.jpg')] bg-cover bg-center bg-no-repeat">
-        <NavbarComponent></NavbarComponent>
-        <div className="items-center justify-around flex flex-col">
-          <div className="max-sm:mb-3 w-[60%] flex flex-row justify-center items-center">
+      <div className="grid grid-rows-[10%,35%,55%] min-h-screen min-w-screen bg-[url('./assets/Wallpaper.jpg')] bg-cover bg-center bg-no-repeat">
+        <div className="">
+          <NavbarComponent></NavbarComponent>
+        </div>
+        <div className="items-center flex flex-col">
+          <div className="w-[60%] flex flex-row justify-center items-center my-5 ">
             <TextInput
               type="text"
               placeholder="Country"
@@ -67,11 +69,23 @@ function App() {
             lonData={lonCountry}
           ></CardDataComponent>
         </div>
-        <div className="md:flex md:flex-row md:justify-around md:items-center max-sm:items-center sm:flex sm:flex-row max-sm:grid max-sm:grid-cols-2 max-sm:mx-5 max-sm:mt-5 lg:mx-5">
-          <HumidityComponent humidityData={humidityCountry}></HumidityComponent>
-          <PressureComponent pressureData={pressureCountry}></PressureComponent>
-          <TempMaxComponent tempMaxData={tempMaxCountry}></TempMaxComponent>
-          <TempMinComponent tempMinData={tempMinCountry}></TempMinComponent>
+        <div className="grid gap-4 mx-5 max-sm:grid-cols-2 sm:grid-cols-2 md:grid-cols-2 xl:grid-cols-4 max-sm:my-5 sm:my-5">
+          <div className="flex items-center justify-center">
+            <HumidityComponent
+              humidityData={humidityCountry}
+            ></HumidityComponent>
+          </div>
+          <div className="flex items-center justify-center">
+            <PressureComponent
+              pressureData={pressureCountry}
+            ></PressureComponent>
+          </div>
+          <div className="flex items-center justify-center">
+            <TempMaxComponent tempMaxData={tempMaxCountry}></TempMaxComponent>
+          </div>
+          <div className="flex items-center justify-center">
+            <TempMinComponent tempMinData={tempMinCountry}></TempMinComponent>
+          </div>
         </div>
       </div>
     </>

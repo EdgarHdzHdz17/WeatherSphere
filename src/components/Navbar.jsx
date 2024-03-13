@@ -18,9 +18,9 @@ function NavbarComponent() {
           Home
         </Navbar.Link>
         <Navbar.Link href="#">Humidity</Navbar.Link>
+        <Navbar.Link href="#">Pressure</Navbar.Link>
         <Navbar.Link href="#">TempMax</Navbar.Link>
         <Navbar.Link href="#">TempMin</Navbar.Link>
-        <Navbar.Link href="#">Pressure</Navbar.Link>
       </Navbar.Collapse>
     </Navbar>
   );

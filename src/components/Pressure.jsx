@@ -5,7 +5,7 @@ import { FaThermometerFull } from "react-icons/fa";
 function PressureComponent(props) {
   return (
     <Card
-      className="max-w-sm bg-transoarent lg:h-[78%] lg:w-[70%] sm:h-[95%] max-sm:h-[90%] max-sm:w-[90%] max-sm:justify-center"
+      className="bg-transparent sm:h-[95%] max-sm:h-[90%] max-sm:w-[90%] lg:h-[80%] lg:w-[70%]"
       imgSrc={varometro}
     >
       <FaThermometerFull className="text-white text-5xl max-sm:text-2xl  max-sm:justify-center max:ml-10 absolute" />
