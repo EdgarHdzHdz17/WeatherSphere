@@ -14,7 +14,7 @@
 
 ## Run Locally
 
-Clone the Name
+Clone the WeatherSphere
 
 ```bash
   git clone https://github.com/EdgarHdzHdz17/WeatherSphere.git
