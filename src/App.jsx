@@ -11,15 +11,15 @@ import { FaSearch } from "react-icons/fa";
 function App() {
   const [country, setCountry] = useState("Mexico");
   const [data, setData] = useState("");
-
+  /*Renderizado del API*/
   useEffect(() => {
     fetchData();
   }, []);
-
+  /**Llamada al API */
   const fetchData = async () => {
     try {
       const response = await fetch(
-        `https://api.openweathermap.org/data/2.5/weather?q=${country}&lang=en&units=metric&appid=b7d168b73bbc7bc71ae6fba71bc38f0d`
+        `https://api.openweathermap.org/data/2.5/weather?q=${country}&lang=en&units=metric&appid={APIKEY}`
       );
       const data = await response.json();
       setData(data);
@@ -28,7 +28,7 @@ function App() {
       console.error("Error fetching data:", error);
     }
   };
-
+  /**Click en el icono para nmandar a llamar el nuevo valor de country */
   const handleCountry = () => {
     fetchData();
   };
@@ -48,7 +48,7 @@ function App() {
         <div className="">
           <NavbarComponent></NavbarComponent>
         </div>
-        <div className="items-center flex flex-col">
+        <div className="items-center flex flex-col ">
           <div className="w-[60%] flex flex-row justify-center items-center my-5 ">
             <TextInput
               type="text"
@@ -69,7 +69,7 @@ function App() {
             lonData={lonCountry}
           ></CardDataComponent>
         </div>
-        <div className="grid gap-4 mx-5 max-sm:grid-cols-2 sm:grid-cols-2 md:grid-cols-2 xl:grid-cols-4 max-sm:my-5 sm:my-5">
+        <div className="grid gap-4 mx-5 max-sm:grid-cols-2 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-2 xl:grid-cols-4 max-sm:mt-1 md:mx-2">
           <div className="flex items-center justify-center">
             <HumidityComponent
               humidityData={humidityCountry}
